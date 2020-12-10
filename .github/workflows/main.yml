@@ -36,8 +36,7 @@ jobs:
       
       - name: Get Halium Source
         run: |
-          mkdir $REPO_NAME/halium && cd $REPO_NAME/halium
-          HALIUM_VER = cat $REPO_NAME/halium-ver
-          repo init -u https://github.com/Halium/android -b $HALIUM_VER --depth=1
+          mkdir halium && cd halium
+          repo init -u https://github.com/Halium/android -b halium-5.1 --depth=1
           repo sync -c -j 16
           
